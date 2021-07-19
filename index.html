@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ToDoApp</title>
+    <style>
+    </style>
+</head>
+<body style="background-color:#dcd5c8;">
+
+<header>
+    <h1>ToDoアプリ</h1>
+    <p>タスク達成率</p>
+</header>
+
+<!-- 入力フォーム -->
+<form  id="mainForm" name="mainForm">
+    <table id="mainTable" border="1">
+        <tr>
+            <th>内容(必須)</th>
+            <th>期限(必須)</th>
+            <th>重要度</th>
+            <th>繰り返し(必須)</th>
+        </tr>
+        <tr>
+            <th>
+                <input type="text" id="contents" required>
+            </th>
+            <th>
+                <!-- カレンダー -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
+                <!-- カレンダー機能 -->
+                <input type="text" id="calendar" required>
+                    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+            </th>
+            <th>
+                <form id="priority">
+                    <input type="radio" name="priority" value="高" id="high">
+                        <label for="high">高</label>
+                    <input type="radio" name="priority" value="中" id="normal" checked>
+                        <label for="normal">中</label>
+                    <input type="radio" name="priority" value="低" id="low">
+                        <label for="low">低</label>
+                </form>
+            </th>
+            <th>
+                <select id="repetition" required>
+                    <option value="なし" selected>なし</option>
+                    <option value="1日">1日</option>
+                    <option value="2日">2日</option>
+                    <option value="3日">3日</option>
+                    <option value="4日">4日</option>
+                    <option value="5日">5日</option>
+                    <option value="6日">6日</option>
+                    <option value="1週間">1週間</option>
+                    <option value="2週間">2週間</option>
+                    <option value="3週間">3週間</option>
+                    <option value="1か月">1か月</option>
+                </select>
+            </th>
+        </tr>
+    </table>
+        <input type="submit" class="btn_save" value="保存">
+        <input type="reset" class="btn_reset" value="クリア">
+</form>
+
+<table id="plans" border="1">
+
+</table>
+<!-- 並び替えボタン -->
+
+
+<!-- 検索窓 -->
+
+<script src = "ToDo.js"></script>
+
+</body>
+</html>
